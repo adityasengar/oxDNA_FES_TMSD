@@ -1,8 +1,9 @@
 import os
 import glob
 import numpy as np
+import argparse
 
-def _logsumexp(x):
+def log_sum_exp(x):
     """
     Numerically stable implementation of log-sum-exp.
     """
@@ -76,19 +77,17 @@ def calculate_free_energy_for_folder(base_folder):
     if not neg_log_weights_A or not neg_log_weights_B:
         return None # A state was not observed in this folder
 
-    log_total_prob_A = _logsumexp(neg_log_weights_A)
-    log_total_prob_B = _logsumexp(neg_log_weights_B)
+    log_total_prob_A = log_sum_exp(neg_log_weights_A)
+    log_total_prob_B = log_sum_exp(neg_log_weights_B)
     
     # This is the raw, volume-dependent dF/kT
     return -(log_total_prob_B - log_total_prob_A)
 
 
-def main():
+def main(base_path: str):
     """
     Main function to find, analyze, correct, and average different sets of simulations.
     """
-    base_path = '/rds/general/user/asengar/home/oxDNA/sengar/bubbles2/thermo2'
-    
     # Define the reference volume for standardization
     REF_BOX_SIDE = 25.0
     V_REF = REF_BOX_SIDE**3
@@ -160,6 +159,9 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(description="Calculate free energy from simulation data.")
+    parser.add_argument("base_path", type=str, help="Path to the directory containing simulation folders.")
+    args = parser.parse_args()
+    main(args.base_path)
 
 
