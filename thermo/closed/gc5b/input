@@ -1,0 +1,45 @@
+####### PROGRAM PARAMETERS ####
+interaction_type = DNA2
+salt_concentration = 0.64
+backend = CPU
+backend_precision = double
+seed = 70203
+
+#### SIM PARAMETERS ####
+sim_type = VMMC
+ensemble = NVT
+steps = 5.e8
+
+delta_translation = 0.22
+delta_rotation = 0.22
+T = 25C
+verlet_skin = 1.
+umbrella_sampling = 1
+op_file = ../op.dat
+weights_file = ../wfile.dat
+
+### Seq. Dependence ##########
+use_average_seq = 0
+seq_dep_file = seq.txt
+small_system = 1
+#### INPUT / OUTPUT ####
+topology = generated.top
+conf_file = generated.dat
+trajectory_file = fake_trajectory.dat
+no_stdout_energy = 0
+restart_step_counter = 1
+energy_file = energy.dat
+print_conf_interval = 5000000
+equilibration_steps = 0
+print_energy_every = 2000
+time_scale = linear
+#external_forces = 1
+#external_forces_file = external1.dat
+
+data_output_1 = {
+name = trajectory.dat
+print_every = 10000
+col_1 = {
+type = Configuration
+}
+}

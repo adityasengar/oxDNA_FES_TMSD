@@ -1,0 +1,162 @@
+{
+	order_parameter = bond
+	name=alpha
+	pair1 = 0, 85
+	pair2 = 1, 84
+	pair3 = 2, 83
+	pair4 = 3, 82
+	pair5 = 4, 81
+	pair6 = 5, 80
+	pair7 = 6, 79
+	pair8 = 7, 78
+	pair9 = 8, 77
+	pair10 = 9, 76
+	pair11 = 10, 75
+	pair12 = 11, 74
+	pair13 = 12, 73
+	pair14 = 13, 72
+	pair15 = 14, 71
+	pair16 = 15, 70
+}
+
+{
+	order_parameter = bond
+	name=gamma_original
+	pair1 = 27, 58
+	pair2 = 28, 57
+	pair3 = 29, 56
+	pair4 = 30, 55
+	pair5 = 31, 54
+	pair6 = 32, 53
+	pair7 = 33, 52
+	pair8 = 34, 51
+	pair9 = 35, 50
+	pair10 = 36, 49
+	pair11 = 37, 48
+	pair12 = 38, 47
+	pair13 = 39, 46
+	pair14 = 40, 45
+	pair15 = 41, 44
+	pair16 = 42, 43
+}
+
+{
+	order_parameter = bond
+	name=gamma_target
+	pair1 = 97, 58
+	pair2 = 98, 57
+	pair3 = 99, 56
+	pair4 = 100, 55
+	pair5 = 101, 54
+	pair6 = 102, 53
+	pair7 = 103, 52
+	pair8 = 104, 51
+	pair9 = 105, 50
+	pair10 = 106, 49
+	pair11 = 107, 48
+	pair12 = 108, 47
+	pair13 = 109, 46
+	pair14 = 110, 45
+	pair15 = 111, 44
+	pair16 = 112, 43
+}
+
+{
+	order_parameter = bond
+	name=beta
+	pair1 = 59, 96
+	pair2 = 60, 95
+	pair3 = 61, 94
+	pair4 = 62, 93
+	pair5 = 63, 92
+	pair6 = 64, 91
+	pair7 = 65, 90
+	pair8 = 66, 89
+	pair9 = 67, 88
+	pair10 = 68, 87
+	pair11 = 69, 86
+}
+
+
+{
+	order_parameter = mindistance
+	name=alpha_d
+	pair1 = 0, 85
+	pair2 = 1, 84
+	pair3 = 2, 83
+	pair4 = 3, 82
+	pair5 = 4, 81
+	pair6 = 5, 80
+	pair7 = 6, 79
+	pair8 = 7, 78
+	pair9 = 8, 77
+	pair10 = 9, 76
+	pair11 = 10, 75
+	pair12 = 11, 74
+	pair13 = 12, 73
+	pair14 = 13, 72
+	pair15 = 14, 71
+	pair16 = 15, 70
+	interfaces = 4.
+}
+
+{
+	order_parameter = mindistance
+	name=gamma_original_d
+	pair1 = 27, 58
+	pair2 = 28, 57
+	pair3 = 29, 56
+	pair4 = 30, 55
+	pair5 = 31, 54
+	pair6 = 32, 53
+	pair7 = 33, 52
+	pair8 = 34, 51
+	pair9 = 35, 50
+	pair10 = 36, 49
+	pair11 = 37, 48
+	pair12 = 38, 47
+	pair13 = 39, 46
+	pair14 = 40, 45
+	pair15 = 41, 44
+	pair16 = 42, 43
+	interfaces = 4.
+}
+
+{
+	order_parameter = mindistance
+	name=gamma_target_d
+	pair1 = 97, 58
+	pair2 = 98, 57
+	pair3 = 99, 56
+	pair4 = 100, 55
+	pair5 = 101, 54
+	pair6 = 102, 53
+	pair7 = 103, 52
+	pair8 = 104, 51
+	pair9 = 105, 50
+	pair10 = 106, 49
+	pair11 = 107, 48
+	pair12 = 108, 47
+	pair13 = 109, 46
+	pair14 = 110, 45
+	pair15 = 111, 44
+	pair16 = 112, 43
+	interfaces = 4.
+}
+
+{
+	order_parameter = mindistance
+	name=beta_d
+	pair1 = 59, 96
+	pair2 = 60, 95
+	pair3 = 61, 94
+	pair4 = 62, 93
+	pair5 = 63, 92
+	pair6 = 64, 91
+	pair7 = 65, 90
+	pair8 = 66, 89
+	pair9 = 67, 88
+	pair10 = 68, 87
+	pair11 = 69, 86
+	interfaces = 2,4
+}

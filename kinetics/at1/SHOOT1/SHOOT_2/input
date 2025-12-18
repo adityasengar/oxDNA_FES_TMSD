@@ -1,0 +1,44 @@
+####### PROGRAM PARAMETERS ####
+interaction_type = DNA2
+salt_concentration = 0.64
+backend = CPU
+backend_precision = double
+seed = 23768
+
+
+
+#### SIM PARAMETERS ####
+sim_type = FFS_MD
+steps = 2e10
+newtonian_steps = 51 
+diff_coeff = 1.25
+#pt = 0.1
+thermostat = john
+
+order_parameters_file = op.dat
+ffs_file = conditions.txt
+T = 25C
+dt = 0.003
+verlet_skin = 0.05
+use_average_seq = 0
+seq_dep_file = seq.txt
+
+
+
+### Seq. Dependence ##########
+
+small_system = 1
+#### INPUT / OUTPUT ####
+topology = generated.top
+conf_file = generated.dat
+#log_file = log.dat
+refresh_vel = 1
+trajectory_file = trajectory.dat
+no_stdout_energy = 0
+restart_step_counter = 0
+energy_file = energy.dat
+print_conf_interval = 10000
+print_conf_ppc = 51
+print_energy_every = 1000
+time_scale = linear
+external_forces=0

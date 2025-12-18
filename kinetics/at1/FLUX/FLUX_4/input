@@ -1,0 +1,54 @@
+##############################
+#### PROGRAM PARAMETERS ####
+##############################
+interaction_type = DNA2
+salt_concentration = 0.64
+backend = CPU
+backend_precision = double
+#debug = 1
+seed = 52387
+##############################
+#### SIM PARAMETERS ####
+##############################
+sim_type = FFS_MD
+steps = 2.e10
+newtonian_steps = 51
+diff_coeff = 1.25
+#pt = 0.1
+thermostat = john
+
+order_parameters_file = ../op.dat
+ffs_file = ../conditions.txt
+T = 25C
+dt = 0.003
+verlet_skin = 0.05
+
+
+### Seq. Dependence ##########
+use_average_seq = 0
+seq_dep_file = ../seq.txt
+
+##############################
+#### INPUT / OUTPUT ####
+##############################
+topology = ../generated.top
+conf_file = last_conf.dat
+trajectory_file = trajectory.dat
+refresh_vel = 1
+log_file = log.dat
+no_stdout_energy = 0
+restart_step_counter = 0
+energy_file = energy.dat
+print_conf_interval = 20000
+equilibration_steps = 0
+print_energy_every = 2000
+time_scale = linear
+external_forces=0
+
+data_output_1 = {
+name = trajectory.dat
+print_every = 2000
+col_1 = {
+type = Configuration
+}
+}

@@ -1,0 +1,2 @@
+Flux Count: 274
+Flux Value: 5418.854

@@ -1,0 +1,13 @@
+action = stop_or
+condition1 = {
+alpha < 1
+}
+condition2 = {
+beta == 11
+}
+condition3 = {
+gamma_original < 1
+}
+condition4 = {
+beta_d > 3.5
+}
