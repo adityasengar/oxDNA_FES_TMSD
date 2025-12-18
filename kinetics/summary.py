@@ -1,9 +1,31 @@
+"""
+This script analyzes synthetic oxDNA simulation data to reconstruct a summary table.
+
+It processes data from a specified case directory, which is expected to contain FLUX 
+and SHOOT subdirectories. The script extracts relevant information from 
+'flux_summary.txt' and 'ffs.log' files, calculates probabilities and rates, 
+and compiles the results into a pandas DataFrame. The final summary table is 
+printed to the console and saved as a CSV file.
+
+The script is designed to be run from the command line, with the case directory 
+and output directory specified as arguments.
+"""
+
 import pandas as pd
 from pathlib import Path
 from typing import List, Dict, Tuple
 
 def parse_flux_summary(file_path: Path) -> Tuple[int, float]:
-    """Reads a flux_summary.txt file and returns the count and value."""
+    """
+    Reads a 'flux_summary.txt' file and extracts the flux count and flux value.
+
+    Args:
+        file_path (Path): The path to the 'flux_summary.txt' file.
+
+    Returns:
+        Tuple[int, float]: A tuple containing the flux count and flux value. 
+                           Returns (0, 0.0) if the file is not found.
+    """
     if not file_path.is_file():
         return 0, 0.0
     
@@ -16,7 +38,16 @@ def parse_flux_summary(file_path: Path) -> Tuple[int, float]:
     return flux_count, flux_value
 
 def analyze_ffs_log(file_path: Path) -> Tuple[int, int]:
-    """Reads a synthetic ffs.log and returns the count of success and failure events."""
+    """
+    Reads a synthetic 'ffs.log' file and counts the number of success and failure events.
+
+    Args:
+        file_path (Path): The path to the 'ffs.log' file.
+
+    Returns:
+        Tuple[int, int]: A tuple containing the count of success and failure events.
+                         Returns (0, 0) if the file is not found.
+    """
     if not file_path.is_file():
         return 0, 0
         
